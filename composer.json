@@ -1,0 +1,35 @@
+{
+    "name": "0377/yfcmf",
+    "description": "TP6+插件+iview 后台管理系统，前后端分离",
+    "license": "Apache-2.0",
+    "authors": [
+      {
+        "name": "Ice",
+        "email": "ice@sbing.vip"
+      }
+    ],
+    "require": {
+      "php": ">=7.1.0",
+      "topthink/framework": "^6.0.0",
+      "topthink/think-orm": "^2.0",
+      "topthink/think-annotation": "^1.1",
+      "topthink/think-ide-helper": "^1.0",
+      "topthink/think-helper": "^3.1",
+      "topthink/think-captcha": "^3.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "yfcmf\\": "src"
+      },
+      "files": [
+        "src/helper.php"
+      ]
+    },
+    "extra": {
+      "think": {
+        "config": {
+          "yfcmf": "src/yfcmf.php"
+        }
+      }
+    }
+  }
