@@ -17,6 +17,7 @@ class YfcmfRequest extends \think\Request
 
     public function getModule()
     {
+
         if (Common::getPhpFile() === 'index') {
             if ($this->originController) {
                 if (strpos($this->originController, 'api.') === 0) {
@@ -28,7 +29,8 @@ class YfcmfRequest extends \think\Request
         } elseif (defined('YFCMF_ADMIN') && YFCMF_ADMIN == true) {
             return 'admin';
         }
-        throw new Exception('module error');
+
+       return 'index';
     }
 
     /**

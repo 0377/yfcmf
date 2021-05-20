@@ -70,6 +70,11 @@ class YfcmfService extends Service
     {
         // 设置mbstring字符编码
         mb_internal_encoding('UTF-8');
+        $path = $this->app->getRootPath() . 'vendor' . DIRECTORY_SEPARATOR . '0377' . DIRECTORY_SEPARATOR . 'yfcmf' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'tpl' . DIRECTORY_SEPARATOR;
+        $exception_tmpl = $path . 'think_exception.tpl';
+        $dispatch_success_tmpl = $path . 'dispatch_jump.tpl';
+        $dispatch_error_tmpl = $path . 'dispatch_jump.tpl';
+        Config::set(['exception_tmpl' => $exception_tmpl, 'dispatch_success_tmpl' => $dispatch_success_tmpl, 'dispatch_error_tmpl' => $dispatch_error_tmpl], 'app');
         $this->initLang();
         $this->initView();
         // 设置替换内容
